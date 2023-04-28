@@ -12,28 +12,28 @@ import java.util.List;
 public class UserDaoJDBCImpl implements UserDao {
 
     //language=SQL
-    public static final String SQL_INSERT =
+    private static final String SQL_INSERT =
             "insert into test.users(name, lastname, age) " +
                     "values(?,?,?) ";
 
     //language=SQL
-    public static final String SQL_CREATE_TABLE =
+    private static final String SQL_CREATE_TABLE =
             "CREATE TABLE test.users (id serial primary key, name text, lastName text, age int)";
 
     //language=SQL
-    public static final String SQL_DROP_TABLE =
+    private static final String SQL_DROP_TABLE =
             "DROP TABLE IF exists test.users";
 
     //language=SQL
-    public static final String SQL_REMOVE_USER_BY_ID =
+    private static final String SQL_REMOVE_USER_BY_ID =
             "DELETE FROM test.users WHERE id = ?";
 
     //language=SQL
-    public static final String SQL_CLEAN_USERS_TABLE =
+    private static final String SQL_CLEAN_USERS_TABLE =
             "DELETE FROM test.users";
 
     //language=SQL
-    public static final String SQL_GET_ALL_USERS =
+    private static final String SQL_GET_ALL_USERS =
             "SELECT * FROM test.users";
 
     public UserDaoJDBCImpl() {
